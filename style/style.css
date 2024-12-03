@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Iceland&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+.language-switcher span {
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.language-switcher span:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.re {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #047857;
+    color: #fff;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.main-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-top button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    font-size: 17px;
+}
+
+.main-top button:hover {
+    background-color: #047954;
+    transition: .5s;
+    color: #fff;
+}
+
+.io {
+    background-color: #ff002b !important;
+    color: #fff;
+}
+
+.io:hover {
+    padding: 2px;
+}
+
+.hr {
+    text-decoration: line-through;
+}
+
+.hrr {
+    background-color: #ff002b;
+    padding: 5px 7px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.kombo-card {
+    margin-left: 10px;
+    background-color: #f4f4f4;
+    padding: 2px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.kombo-card:hover {
+    transition: .7s;
+
+}
+
+footer {
+    background-color: #262a2c;
+    margin-top: 100px;
+    padding: 100px;
+}
+
+.elo {
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.elo p {
+    padding-top: 10px;
+    color: #fff;
+}
+
+.tug {
+    background-color: #262a2c;
+}
+
+.tug p {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main-left a:hover {
+    transition: .7s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    background: #f4f4f4;
+    width: 100%;
+}
+
+.carousel {
+    padding-top: 70px;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity .7s ease;
+}
+
+.preloader-image {
+    width: 100px;
+    /* Rasm o'lchamini sozlang */
+    height: 100px;
+    animation: rotateAnimation 1s linear infinite;
+    /* Aylanish animatsiyasi */
+}
+
+/* Rasmning aylanish animatsiyasi */
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+        /* Boshlang'ich holat */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* 360 daraja aylanish */
+    }
+}
+
+i {
+    color: #047857;
+}
+
+.main-top {
+    position: relative;
+
+
+}
+
+@media (max-width:900px) {
+    .rightt p {
+        display: none;
+    }
+
+    i {
+        display: none;
+    }
+
+    .leftt i {
+        display: none;
+    }
+
+    .o {
+        display: none;
+    }
+
+    .kombo-cards {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    .kombo-card img {
+        width: 100% !important;
+    }
+
+    .kombo-card {
+        text-align: center !important;
+    }
+
+    .pq {
+        justify-content: center;
+    }
+
+    .tp {
+        display: none !important;
+    }
+
+    .main-top {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .main-leftt button {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    i {
+        display: none !important;
+    }
+
+    .ti {
+        flex-wrap: wrap;
+        gap: 30px
+    }
+
+    .leftt img {
+        width: 100%;
+    }
+
+    .rightt button {
+        width: 100%;
+    }
+
+    .tj {
+        display: none;
+    }
+}

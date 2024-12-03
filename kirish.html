@@ -4,53 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Phone Input</title>
+    <link rel="stylesheet" href="./kirish.css">
 </head>
 
 <body>
-
-
-
-    <header>
-        <div class="container">
-            <nav>
-                <div style="display: flex; justify-content: space-between; align-items: center;" class="leftt">
-                    <img src="./imgs/logo.webp" alt="">
-                    <i style="margin-left: 30px;" class="fa-solid fa-location-dot"></i>
-                    <div style="margin-left: 10px;" class="o">
-                        <p>shaxar:</p>
-                        <p>Toshkent</p>
-
-                    </div>
-                    <div class="ti" style="display: flex; margin-left: 50px;">
-                        <img style="margin-left: 40px;" src="https://bellissimo.uz/images/phone.svg" alt="">
-                        <p>Yagona aloqa <br> markazi</p>
-                    </div>
-                </div>
-                <div class="rightt" style="display: flex; justify-content: space-between;
-            align-items: center;">
-                    <i style="margin-right: 10px;" class="fa-solid fa-phone"></i>
-                    <p style="margin-right: 50px;"> Yagona aloqa <br> markazi</p>
-                    <p style="margin-right: 50px;">Bepul yetkazish 24/7 <br> mavjud</p>
-                    <a style="margin-right: 20px;" href="./halal.html"><img src="./imgs/halal.webp" alt=""></a>
-
-                    <button
-                        style="padding: 10px 30px; border: none; border-radius: 20px; background-color: #047857; color: #fff;">Kirish</button>
-                </div>
-            </nav>
-        </div>
-
-    </header>
-    <main>
-
-        <h1 style="color: #047857;">Raqamingizni kiriting</h1>
-
-
-    </main>
+    <div class="container oi">
+        <h1>Введите свой номер</h1>
+        <form id="phone-form">
+            <div class="input-group">
+                <span>+998</span>
+                <input type="tel" id="phone-number" placeholder="(__) ___-__-__" maxlength="13" required>
+            </div>
+            <button type="submit" disabled id="submit-btn">Отправить код</button>
+        </form>
+        <p class="info">
+            This site is protected by reCAPTCHA and the Google
+            <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+        </p>
+    </div>
     <script src="./script.js"></script>
 </body>
 

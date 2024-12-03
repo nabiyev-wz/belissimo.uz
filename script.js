@@ -100,4 +100,32 @@ window.addEventListener('load', () => {
   }, 1500); // 1 soniya (1000 millisekund) kutish
 });
 
+const phoneInput = document.getElementById("phone-number");
+const submitBtn = document.getElementById("submit-btn");
+
+phoneInput.addEventListener("input", () => {
+  const phoneRegex = /^\(\d{2}\) \d{3}-\d{2}-\d{2}$/;
+  submitBtn.disabled = !phoneRegex.test(phoneInput.value);
+  if (!submitBtn.disabled) {
+    submitBtn.style.backgroundColor = "#4caf50";
+  } else {
+    submitBtn.style.backgroundColor = "#ccc";
+  }
+});
+
+phoneInput.addEventListener("keypress", (e) => {
+  if (!/\d/.test(e.key) && e.key !== "Backspace") {
+    e.preventDefault();
+  }
+  formatPhoneNumber(phoneInput);
+});
+
+function formatPhoneNumber(input) {
+  let value = input.value.replace(/\D/g, "");
+  if (value.length > 2) value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+  if (value.length > 8) value = `${value.slice(0, 8)}-${value.slice(8)}`;
+  if (value.length > 11) value = `${value.slice(0, 11)}-${value.slice(11)}`;
+  input.value = value;
+}
+
     
